@@ -1,0 +1,16 @@
+# Python bytecode cache
+__pycache__/
+*.py[cod]
+
+# Virtual environment
+myenv/
+env/
+venv/
+
+# VSCode or PyCharm files (optional)
+.vscode/
+.idea/
+
+# OS-specific
+.DS_Store
+Thumbs.db
