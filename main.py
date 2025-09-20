@@ -45,7 +45,7 @@ class PatientUpdate(BaseModel):
     
 # Function for loading data from json file
 def load_data():
-    with open ('patients.json', 'r') as f:
+    with open ('patient.json', 'r') as f:
         data=json.load(f)
     return data    
 
@@ -82,7 +82,7 @@ def view_patient(
     raise HTTPException(status_code=404, detail="Patient not found")
 
 @app.get("/sort")
-def sort_patients(sort_by : str = Query(..., description='Sort on the basis of Height, Weight or BMI'), order: str = Query('asc', description = 'Sort in asc or decs order')):
+def sort_patients(sort_by : str = Query(..., description='Sort on the basis of height, weight or bmi'), order: str = Query('asc', description = 'Sort in asc or decs order')):
     
     valid_fields = ['height', 'weight', 'bmi']
     
