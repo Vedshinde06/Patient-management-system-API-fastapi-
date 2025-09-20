@@ -1,4 +1,4 @@
-fastapi==0.111.3
+fastapi==0.116.0
 uvicorn[standard]==0.23.2
 pydantic==2.6.2
 requests==2.32.0
