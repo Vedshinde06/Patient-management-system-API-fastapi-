@@ -159,3 +159,17 @@ def delete(patient_id: str):
    save_data(data)
    
    return JSONResponse(status_code=200, content={'message' : 'Patient deleted Successfully'})
+
+
+import os
+import uvicorn
+
+app = FastAPI()
+
+@app.get("/")
+def home():
+    return {"message": "FastAPI on Render working 🎉"}
+
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 8000))  
+    uvicorn.run("main:app", host="0.0.0.0", port=port)
